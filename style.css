@@ -1,0 +1,361 @@
+html {
+    background-image: url("/background.png");
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    margin:0;
+    box-sizing: inherit;
+  }
+  
+  *:focus {
+    outline: 0;
+  }
+  
+  input,
+  textarea,
+  button,
+  select,
+  a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+  
+  @font-face {
+    font-family: 'BenderBold';
+    src: url('Bender-Bold.otf'); /* IE9 Compat Modes */
+  }
+  
+  
+  #fullScreenContainer {
+    position: relative;
+    background-color: #222222;
+    overflow: hidden;
+  }
+  
+  #map {
+    user-select: none;
+    background: grey;
+    position: absolute !important;
+    width: 100%;
+    height: 110%;
+    top: 0;
+    right: 0;
+    z-index:0;
+  }
+  
+  #gridOverlayContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index:1;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    pointer-events: none;
+  }
+  
+  .gridCell {
+    background-color: #222222;
+  /*   border: 1px solid #333333; */
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #666;
+  }
+  
+  .plusSymbol {
+    user-select: none;
+    opacity:0;
+  }
+  
+  #ipAddressOverlayContainer {
+    position: absolute;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.1);
+    z-index:2;
+  }
+  
+  #ipAddressContainer {
+    font-family: 'BenderBold';
+    color: #FFF;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    animation-name: flicker;
+    animation-duration: 100ms;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+  }
+  
+  #ipAddress::selection {
+    background: #FFF;
+    color: #222;
+  }
+  
+  #copyButton {
+    user-select: none;
+    opacity: 0;
+    outline: none;
+    margin-top: 1.5rem;
+    font-family: 'BenderBold';
+    font-size: 1.8rem;
+    background-color: rgba(0,0,0,0.2);
+    border: 2px solid #FFF;
+    color: #FFF;
+    padding-top: 0.24rem;
+    padding-bottom: 0.24rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    cursor: pointer;
+  }
+  
+  #copyButton:hover {
+    background-color: #FFF;
+    color: #333;
+  }
+  
+  /* #copyButton:focus {
+    outline: 3px solid #FFF;
+    outline-offset: 4px;
+  } */
+  
+  #productHuntBadgeContainer {
+    position: absolute;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    margin-top: 0.75vh;
+    width: 100%;
+  }
+  
+  #productHuntBadge {
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  #footerOverlayContainer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    background-color: rgba(0,0,0,0);
+    z-index: 2;
+  }
+  
+  #footerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 90%;
+  }
+  
+  #locationContainer {
+    font-family: 'BenderBold';
+    color: #EEE;
+    font-size: 1.8rem;
+    opacity: 0;
+    text-transform: uppercase;
+    flex-basis: 60%;
+  }
+  
+  #locationContainer::selection {
+    background: #FFF;
+    color: #222;
+  }
+  
+  #AboutUs {
+    font-family: 'BenderBold';
+    color: #999;
+    font-size: 1.2rem;
+    opacity: 0;
+    text-align: right;
+  }
+  
+  #AboutUs::selection {
+    background: #FFF;
+    color: #222;
+  }
+  
+  #ipAddress::selection {
+    background: #FFF;
+    color: #222;
+  }
+  
+  .captionError {
+    font-size: 3rem !important;
+  }
+  
+  #caption {
+    user-select: none;
+  }
+  
+  .contactLink {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .contactLink:hover {
+    text-decoration: line-through;
+  }
+  
+  @media only screen and (max-width: 500px) {
+    /* For mobile */
+    
+    #footerContainer {
+      width: 90%;
+    }
+    
+    #caption {
+    font-size: 1.7rem;
+    }
+    
+    #ipAddress {
+      font-size: 3rem;
+    }
+    
+    #ipAddressContainer {
+      margin-bottom: 1.25rem;
+    }
+    
+    #locationContainer {
+      font-size: 1rem;
+    }
+    
+    #AboutUs {
+      font-size: 0.65rem;
+    }
+    
+    #copyButton {
+      margin-top: 1.2rem;
+      font-size: 1.7rem;
+      
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+    }
+    
+    .gridCell {
+      padding: 2rem;
+    }
+  
+    #info-city {
+      position: absolute;
+      bottom: 0px;
+      margin: 15px;
+    }
+  }
+  
+  
+  @media only screen and (min-width: 500px) and (max-width: 1000px) {
+    /* For tablets */
+    #caption {
+    font-size: 2rem;
+    }
+    
+    
+    #ipAddress {
+      font-size: 3.5rem;
+    }
+    
+    #ipAddressContainer {
+      margin-bottom: 3.5rem;
+    }
+    
+    #copyButton {
+      font-size: 1.8rem;
+    }
+    
+    .gridCell {
+      padding: 2.8rem;
+    }
+  
+    #info-city {
+      position: absolute;
+      bottom: 0px;
+      margin: 15px;
+    }
+    
+  }
+  
+  @media only screen and (min-width: 1000px) {
+    /* For desktop: */
+    #caption {
+    font-size: 2.5rem;
+    }
+    
+    #ipAddress {
+      font-size: 5rem;
+    }
+    
+    #ipAddressContainer {
+      margin-bottom: 3.5rem;
+    }
+    
+    #copyButton {
+      font-size: 2.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .gridCell {
+      padding: 3.5rem;
+    }
+  
+    #info-city {
+      position: absolute;
+      bottom: 0px;
+      margin: 15px;
+    }
+    
+  }
+  
+  @keyframes black2Transparent {
+    0% {background-color: #222;}
+    50% {background-color: #777;}
+    100% {background-color: transparent;}
+  }
+  
+  @keyframes flicker {
+    0% {opacity: 1;}
+    30% {opacity: 0;}
+    60% {opacity: 1;}
+    90% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+  @keyframes flicker2 {
+    0% {opacity: 1;}
+    30% {opacity: 0;}
+    60% {opacity: 1;}
+    90% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+  @keyframes flash {
+    0% {background: transparent; color: #FFF; }
+    30% {opacity:1;}
+    40% {opacity:0;}
+    50% {background: #FFF; color: #222; opacity:1;}
+    60% {opacity:0;}
+    70% {background: #FFF; color: #222; opacity:1;}
+    80% {opacity:0;}
+    90% {opacity:1;}
+    95% {opacity:0;}
+    100% {background: transparent; color: #FFF; opacity:1;}
+  }
+  
