@@ -16,13 +16,26 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/components/style.css">
+    <link rel='stylesheet' href='src/components/NavBar.css'>
+    <link rel='stylesheet' href='src/components/Scrollbar.css'>
     
     <!-- import the webpage's javascript file -->
-    <script src="script.js" defer></script>
+    <script src="src/components/script.js" defer></script>
     
   </head>  
   <body>
+
+    <header>
+      <a class="logo" src="src/assets/img/logo.png" alt="logo">
+      <nav>
+          <ul class="nav__links">
+              <li><a href="https://notloxik.github.io">Home</a></li>
+          </ul>
+      </nav>
+      <a class="cta" href="https://ko-fi.com/NotLoxik"><button>DONATE</button></a>
+    </header>
+    
     <section id="fullScreenContainer">
       
       <div id="map" tabindex="-1"></div>

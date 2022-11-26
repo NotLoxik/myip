@@ -1,5 +1,5 @@
 html {
-    background-image: url("/background.png");
+    background-image: url("../assets/img/background.png");
     box-sizing: border-box;
     font-size: 16px;
   }
@@ -23,7 +23,7 @@ html {
   
   @font-face {
     font-family: 'BenderBold';
-    src: url('Bender-Bold.otf'); /* IE9 Compat Modes */
+    src: url('../assets/font/Bender-Bold.otf'); /* IE9 Compat Modes */
   }
   
   
