@@ -35,7 +35,6 @@ html {
   
   #map {
     user-select: none;
-    background: grey;
     position: absolute !important;
     width: 100%;
     height: 110%;
@@ -55,8 +54,6 @@ html {
   }
   
   .gridCell {
-    background-color: #222222;
-  /*   border: 1px solid #333333; */
     font-size: 1rem;
     display: flex;
     justify-content: center;
