@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tvoje IP adresa ihned!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" CONTENT="Nevíš svojí IP? Já ano!">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#333333">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="script.js" defer></script>
+    
+  </head>  
+  <body>
+    <section id="fullScreenContainer">
+      
+      <div id="map" tabindex="-1"></div>
+      <div id="gridOverlayContainer"></div>
+      <header id="ipAddressOverlayContainer">
+        <div id="ipAddressContainer">
+          <span id="caption"> SKENUJI </span>
+          <span id="ipAddress"></span>
+          <button id="copyButton" class="copyButton" data-clipboard-target="#ipAddress">KOPÍROVAT</button>
+        </div>
+      </header>
+      
+    </section>
+    
+  </body>
+</html>
