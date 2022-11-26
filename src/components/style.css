@@ -29,7 +29,7 @@ html {
   
   #fullScreenContainer {
     position: relative;
-    background-color: #222222;
+    background-image: url("../assets/img/background.png");
     overflow: hidden;
   }
   
