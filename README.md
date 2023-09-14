@@ -13,7 +13,7 @@ MyIP is a straightforward and user-friendly web tool that provides you with your
 - **No Frills:** We believe in simplicity. MyIP is designed to do one thing and do it well: show you your IP address.
 
 ### How to Use MyIP:
-1. Visit the MyIP website at www.myip.com.
+1. Visit the MyIP website at https://loxik.dev/myip
 2. Your IP address will be displayed prominently on the page.
 3. Click the "COPY" button to copy your IP address to your clipboard for easy sharing or pasting into other applications.
 
