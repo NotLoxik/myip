@@ -1,43 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Tvoje IP adresa ihned!</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="Description" CONTENT="Nevíš svojí IP? Já ano!">
-    <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#17181A">
-    <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#17181A">
-    <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#17181A">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="public/favicon.ico"/>
+    <title>My IP Address</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="Description" content="Do you know your IP? I do!" />
+    <meta name="theme-color" content="#FEE75C" />
+    <meta name="msapplication-navbutton-color" content="#FEE75C" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FEE75C" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="src/assets/img/favicon.ico" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="src/components/style.css">
-    <link rel='stylesheet' href='src/components/NavBar.css'>
-    <link rel='stylesheet' href='src/components/Scrollbar.css'>
-    
-    <!-- import the webpage's javascript file -->
+    <link rel="stylesheet" href="src/components/style.css" />
     <script src="src/components/script.js" defer></script>
-    
-  </head>  
+  </head>
   <body>
-    
     <section id="fullScreenContainer">
-      
       <div id="map" tabindex="-1"></div>
       <div id="gridOverlayContainer"></div>
       <header id="ipAddressOverlayContainer">
         <div id="ipAddressContainer">
           <span id="caption"> </span>
           <span id="ipAddress"></span>
-          <button id="copyButton" class="copyButton" data-clipboard-target="#ipAddress">KOPÍROVAT</button>
+          <button id="copyButton" class="copyButton" data-clipboard-target="#ipAddress">COPY</button>
         </div>
       </header>
-      
     </section>
-    
   </body>
 </html>

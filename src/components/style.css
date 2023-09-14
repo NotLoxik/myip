@@ -1,5 +1,5 @@
 html {
-    background-image: url("../assets/img/background.png");
+    background-color: #000;
     box-sizing: border-box;
     font-size: 16px;
   }
@@ -24,47 +24,6 @@ html {
   @font-face {
     font-family: 'BenderBold';
     src: url('../assets/font/Bender-Bold.otf'); /* IE9 Compat Modes */
-  }
-  
-  
-  #fullScreenContainer {
-    position: relative;
-    background-image: url("../assets/img/background.png");
-    overflow: hidden;
-  }
-  
-  #map {
-    user-select: none;
-    position: absolute !important;
-    width: 100%;
-    height: 110%;
-    top: 0;
-    right: 0;
-    z-index:0;
-  }
-  
-  #gridOverlayContainer {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index:1;
-    display: grid;
-    grid-template-columns: repeat(20, 1fr);
-    pointer-events: none;
-  }
-  
-  .gridCell {
-    font-size: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #666;
-  }
-  
-  .plusSymbol {
-    user-select: none;
-    opacity:0;
   }
   
   #ipAddressOverlayContainer {
@@ -120,11 +79,6 @@ html {
     color: #333;
   }
   
-  /* #copyButton:focus {
-    outline: 3px solid #FFF;
-    outline-offset: 4px;
-  } */
-  
   #productHuntBadgeContainer {
     position: absolute;
     display: flex;
@@ -162,33 +116,6 @@ html {
     width: 90%;
   }
   
-  #locationContainer {
-    font-family: 'BenderBold';
-    color: #EEE;
-    font-size: 1.8rem;
-    opacity: 0;
-    text-transform: uppercase;
-    flex-basis: 60%;
-  }
-  
-  #locationContainer::selection {
-    background: #FFF;
-    color: #222;
-  }
-  
-  #AboutUs {
-    font-family: 'BenderBold';
-    color: #999;
-    font-size: 1.2rem;
-    opacity: 0;
-    text-align: right;
-  }
-  
-  #AboutUs::selection {
-    background: #FFF;
-    color: #222;
-  }
-  
   #ipAddress::selection {
     background: #FFF;
     color: #222;
@@ -202,15 +129,6 @@ html {
     user-select: none;
   }
   
-  .contactLink {
-    color: white;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
-  .contactLink:hover {
-    text-decoration: line-through;
-  }
   
   @media only screen and (max-width: 500px) {
     /* For mobile */
@@ -250,12 +168,7 @@ html {
     .gridCell {
       padding: 2rem;
     }
-  
-    #info-city {
-      position: absolute;
-      bottom: 0px;
-      margin: 15px;
-    }
+
   }
   
   
@@ -281,12 +194,7 @@ html {
     .gridCell {
       padding: 2.8rem;
     }
-  
-    #info-city {
-      position: absolute;
-      bottom: 0px;
-      margin: 15px;
-    }
+
     
   }
   
@@ -311,12 +219,6 @@ html {
     
     .gridCell {
       padding: 3.5rem;
-    }
-  
-    #info-city {
-      position: absolute;
-      bottom: 0px;
-      margin: 15px;
     }
     
   }
